@@ -1,0 +1,27 @@
+$Width: 1024px;
+$Height: 600px;
+
+
+
+.voez {
+	Margin: 0;
+
+	.voez-tile {
+		Display: Inline-Flex;
+		Flex-Direction: Row;
+		Justify-Content: Center;
+		Align-Items: Center;
+
+		Width: 100px;
+		Height: 100px;
+		
+		// 3px / Height
+		Outline: 0.005vh Solid #717391;
+
+		Transform: Rotate(var(--degree, 0));
+
+		* {
+			Transform: Rotate(calc(var(--degree, 0) * -1));
+		}
+	}
+}

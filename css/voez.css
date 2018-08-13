@@ -1,0 +1,15 @@
+.voez {
+  Margin: 0; }
+  .voez .voez-tile {
+    Display: Inline-Flex;
+    Flex-Direction: Row;
+    Justify-Content: Center;
+    Align-Items: Center;
+    Width: 100px;
+    Height: 100px;
+    Outline: 0.005vh Solid #717391;
+    Transform: Rotate(var(--degree, 0)); }
+    .voez .voez-tile * {
+      Transform: Rotate(calc(var(--degree, 0) * -1)); }
+
+/*# sourceMappingURL=voez.css.map */
