@@ -1,26 +1,47 @@
-$Width: 1024px;
-$Height: 600px;
+@charset "UTF-8";
+
+@mixin flexible-box ($aspect: 100%) {
+	@if & {
+		&::Before {
+			Content: "";
+
+			Display: Block;
+			Padding-Top: $aspect;
+		}
+	}
+}
 
 
 
 .voez {
 	Margin: 0;
 
+	.voez-slot {
+		Display: Inline-Flex;
+		Flex-Direction: Row;
+
+		Margin: 0;
+		Padding: 0;
+
+		Transform: Rotate(var(--degree, 0));
+		Transform-Origin: Left Center;
+	}
+
 	.voez-tile {
+		@include flexible-box();
+
 		Display: Inline-Flex;
 		Flex-Direction: Row;
 		Justify-Content: Center;
 		Align-Items: Center;
-
-		Width: 100px;
-		Height: 100px;
 		
 		// 3px / Height
 		Outline: 0.005vh Solid #717391;
 
-		Transform: Rotate(var(--degree, 0));
-
 		* {
+			Width: 100%;
+			Text-Align: Center;
+
 			Transform: Rotate(calc(var(--degree, 0) * -1));
 		}
 	}

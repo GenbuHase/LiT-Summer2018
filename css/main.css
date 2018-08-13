@@ -1,5 +1,13 @@
-Body {
-  Width: 100vw;
-  Height: 100vh; }
+@charset "UTF-8";
+HTML, Body {
+  Width: 100%;
+  Height: 100%;
+  Overflow: Hidden;
+  Font-Family: "メイリオ", "Meiryo";
+}
+
+.voez-slot > * {
+  Width: 5vw;
+}
 
 /*# sourceMappingURL=main.css.map */

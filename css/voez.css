@@ -1,15 +1,30 @@
 .voez {
-  Margin: 0; }
-  .voez .voez-tile {
-    Display: Inline-Flex;
-    Flex-Direction: Row;
-    Justify-Content: Center;
-    Align-Items: Center;
-    Width: 100px;
-    Height: 100px;
-    Outline: 0.005vh Solid #717391;
-    Transform: Rotate(var(--degree, 0)); }
-    .voez .voez-tile * {
-      Transform: Rotate(calc(var(--degree, 0) * -1)); }
+  Margin: 0;
+}
+.voez .voez-slot {
+  Display: Inline-Flex;
+  Flex-Direction: Row;
+  Margin: 0;
+  Padding: 0;
+  Transform: Rotate(var(--degree, 0));
+  Transform-Origin: Left Center;
+}
+.voez .voez-tile {
+  Display: Inline-Flex;
+  Flex-Direction: Row;
+  Justify-Content: Center;
+  Align-Items: Center;
+  Outline: 0.005vh Solid #717391;
+}
+.voez .voez-tile::Before {
+  Content: "";
+  Display: Block;
+  Padding-Top: 100%;
+}
+.voez .voez-tile * {
+  Width: 100%;
+  Text-Align: Center;
+  Transform: Rotate(calc(var(--degree, 0) * -1));
+}
 
 /*# sourceMappingURL=voez.css.map */

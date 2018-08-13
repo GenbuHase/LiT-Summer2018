@@ -1,4 +1,18 @@
+@charset "UTF-8";
+
+HTML {
+	Width: 100%;
+	Height: 100%;
+
+	Overflow: Hidden;
+
+	Font-Family: "メイリオ", "Meiryo";
+}
+
 Body {
-	Width: 100vw;
-	Height: 100vh;
+	@extend HTML;
+}
+
+.voez-slot > * {
+	Width: 5vw;
 }
