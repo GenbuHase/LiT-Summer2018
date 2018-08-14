@@ -31,7 +31,7 @@
   align-items: center;
   margin: 0 0.5vmin 0.5vmin 0;
   outline: 0.5vmin solid #717391;
-  transition: box-shadow 0.1s linear;
+  transition: background-color 0.25s linear, box-shadow 0.1s linear;
 }
 .voez .voez-tile::Before, .voez .voez-tabs::Before {
   content: "";
@@ -39,8 +39,12 @@
   padding-top: 100%;
 }
 .voez .voez-tile:hover, .voez .voez-tabs:hover {
+  background-color: #e2e2e8;
   box-shadow: 0px 0px 10px 2.5px #327cf5;
-  transition: box-shadow 0.1s linear;
+  transition: background-color 0.25s linear, box-shadow 0.1s linear;
+}
+.voez .voez-tile A, .voez .voez-tabs A {
+  text-decoration: none;
 }
 .voez .voez-tile .voez-tile--item, .voez .voez-tabs .voez-tile--item, .voez .voez-tile .voez-tabs > .voez-tabs--cover, .voez .voez-tabs > .voez-tabs--cover {
   display: flex;
@@ -48,17 +52,20 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  color: inherit;
   transform: rotate(calc(var(--degree, 0) * -1));
+}
+.voez .voez-tile .voez-tile--item Svg, .voez .voez-tabs .voez-tile--item Svg, .voez .voez-tabs > .voez-tabs--cover Svg {
+  Fill: #6c6e8d;
+}
+.voez .voez-tile .voez-tile--item Svg:hover, .voez .voez-tabs .voez-tile--item Svg:hover, .voez .voez-tabs > .voez-tabs--cover Svg:hover {
+  Fill: #eeeeee;
 }
 .voez .voez-tile .voez-tile--item-picture, .voez .voez-tabs .voez-tile--item-picture {
   transform: none;
 }
 .voez .voez-tabs {
-  transition: background-color 0.25s linear;
-}
-.voez .voez-tabs:hover {
-  background: #e2e2e8;
-  transition: background-color 0.25s linear;
+  cursor: pointer;
 }
 .voez .voez-tabs > .voez-tabs--holder {
   flex-wrap: wrap;
@@ -68,6 +75,15 @@
 .voez .voez-tabs > .voez-tabs--holder > .voez-tab {
   width: 50%;
   height: 50%;
+  transition: color 0.1s linear, background-color 0.1s linear;
+}
+.voez .voez-tabs > .voez-tabs--holder > .voez-tab:hover:not(.voez-tab--empty) {
+  color: #eeeeee;
+  background-color: #f2a012;
+  transition: color 0.1s linear, background-color 0.1s linear;
+}
+.voez .voez-tabs > .voez-tabs--holder > .voez-tab.voez-tab--back {
+  cursor: pointer;
 }
 .voez .voez-text {
   display: inline;

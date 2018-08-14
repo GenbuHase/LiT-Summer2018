@@ -13,11 +13,20 @@
 
 
 
+$text-color: #6c6e8d;
+$outline-color: #717391;
+$selected-background-color: #e2e2e8;
+$selected-shadow-color: #327cf5;
+$selected-tab-text-color: #eeeeee;
+$selected-tab-background-color: #f2a012;
+
+
+
 .voez {
 	margin: 0;
 	overflow: hidden;
 
-	color: #6c6e8d;
+	color: $text-color;
 	font-size: 2.5vmin;
 
 
@@ -61,16 +70,26 @@
 		align-items: center;
 		
 		margin: 0 0.5vmin 0.5vmin 0;
-		outline: 0.5vmin solid #717391;
+		outline: 0.5vmin solid $outline-color;
 		// box-shadow: 2px -2px 10px 0px black;
-
-		transition: box-shadow 0.1s linear;
+		
+		transition:
+			background-color 0.25s linear,
+			box-shadow 0.1s linear;
 
 
 
 		&:hover {
-			box-shadow: 0px 0px 10px 2.5px #327cf5;
-			transition: box-shadow 0.1s linear;
+			background-color: $selected-background-color;
+			box-shadow: 0px 0px 10px 2.5px $selected-shadow-color;
+
+			transition:
+				background-color 0.25s linear,
+				box-shadow 0.1s linear;
+		}
+
+		A {
+			text-decoration: none;
 		}
 
 		.voez-tile--item {
@@ -81,7 +100,21 @@
 			width: 100%;
 			height: 100%;
 
+			color: inherit;
+
 			transform: rotate(calc(var(--degree, 0) * -1));
+
+
+
+			Svg {
+				Fill: $text-color;
+
+
+
+				&:hover {
+					Fill: $selected-tab-text-color;
+				}
+			}
 		}
 
 		.voez-tile--item-picture {
@@ -92,14 +125,7 @@
 	.voez-tabs {
 		@extend .voez-tile;
 
-		transition: background-color 0.25s linear;
-
-
-
-		&:hover {
-			background: #e2e2e8;
-			transition: background-color 0.25s linear;
-		}
+		cursor: pointer;
 
 
 
@@ -120,10 +146,23 @@
 			> .voez-tab {
 				width: 50%;
 				height: 50%;
+
+				transition:
+					color 0.1s linear,
+					background-color 0.1s linear;
+
+				&:hover:not(.voez-tab--empty) {
+					color: $selected-tab-text-color;
+					background-color: $selected-tab-background-color;
+
+					transition:
+						color 0.1s linear,
+						background-color 0.1s linear;
+				}
 			}
 
-			> .voez-tab--back {
-				
+			> .voez-tab.voez-tab--back {
+				cursor: pointer;
 			}
 		}
 	}

@@ -5,12 +5,13 @@ const voezTabsCollection = document.querySelectorAll(".voez-tabs");
 for (const voezTabs of voezTabsCollection) {
 	const cover = voezTabs.querySelector(".voez-tabs--cover");
 	const holder = voezTabs.querySelector(".voez-tabs--holder");
+	const backTile = voezTabs.querySelector(".voez-tabs--holder > .voez-tab.voez-tab--back");
 
 	holder.classList.add("hidden");
 
 	while (holder.children.length < 4) {
 		const tab = document.createElement("div");
-		tab.classList.add("voez-tab");
+		for (const className of ["voez-tab", "voez-tab--empty"]) tab.classList.add(className);
 
 		const tabContent = document.createElement("span");
 		tabContent.classList.add("voez-tile--item");
@@ -19,7 +20,13 @@ for (const voezTabs of voezTabsCollection) {
 		holder.insertBefore(tab, holder.querySelector(".voez-tab.voez-tab--back"));
 	}
 
-	voezTabs.addEventListener("click", () => {
+	cover.addEventListener("click", () => {
+		cover.classList.toggle("hidden");
+		holder.classList.toggle("hidden");
+	});
+
+	backTile.addEventListener("click", () => {
+		holder.classList.toggle("hidden");
 		cover.classList.toggle("hidden");
 	});
 }

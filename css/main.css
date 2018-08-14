@@ -27,9 +27,15 @@ Body {
 #landing.voez-grid .voez-tabs--cover {
   font-size: 7.5vmin;
 }
-#landing.voez-grid > #landing-blank {
+#landing.voez-grid .voez-tile--item Svg {
+  width: 7.5vmin;
+}
+#landing.voez-grid > #landing-link {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
+#landing.voez-grid > #landing-link .voez-tab {
+  --degree: 45deg ;
 }
 #landing.voez-grid > #landing-menu {
   grid-column: 2 / 3;
@@ -40,7 +46,7 @@ Body {
   grid-row: 2 / 3;
 }
 #landing.voez-grid > #landing-sharing .voez-tab {
-  --degree: 45deg;
+  --degree: 45deg ;
 }
 
 /*# sourceMappingURL=main.css.map */

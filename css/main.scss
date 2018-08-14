@@ -40,9 +40,15 @@ Body {
 		font-size: 7.5vmin;
 	}
 
-	> #landing-blank {
+	.voez-tile--item Svg {
+		width: 7.5vmin;
+	}
+
+	> #landing-link {
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
+
+		.voez-tab { --degree: 45deg }
 	}
 
 	> #landing-menu {
@@ -53,9 +59,7 @@ Body {
 	> #landing-sharing {
 		grid-column: 2 / 3;
 		grid-row: 2 / 3;
-	}
 
-	> #landing-sharing .voez-tab {
-		--degree: 45deg;
+		.voez-tab { --degree: 45deg }
 	}
 }
