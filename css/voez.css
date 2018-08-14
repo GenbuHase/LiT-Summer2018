@@ -56,10 +56,10 @@
   transform: rotate(calc(var(--degree, 0) * -1));
 }
 .voez .voez-tile .voez-tile--item Svg, .voez .voez-tabs .voez-tile--item Svg, .voez .voez-tabs > .voez-tabs--cover Svg {
-  Fill: #6c6e8d;
+  fill: #6c6e8d;
 }
 .voez .voez-tile .voez-tile--item Svg:hover, .voez .voez-tabs .voez-tile--item Svg:hover, .voez .voez-tabs > .voez-tabs--cover Svg:hover {
-  Fill: #eeeeee;
+  fill: #eeeeee;
 }
 .voez .voez-tile .voez-tile--item-picture, .voez .voez-tabs .voez-tile--item-picture {
   transform: none;
@@ -71,13 +71,14 @@
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
+  cursor: initial;
 }
 .voez .voez-tabs > .voez-tabs--holder > .voez-tab {
   width: 50%;
   height: 50%;
   transition: color 0.1s linear, background-color 0.1s linear;
 }
-.voez .voez-tabs > .voez-tabs--holder > .voez-tab:hover:not(.voez-tab--empty) {
+.voez .voez-tabs > .voez-tabs--holder > .voez-tab:not(.voez-tab--empty):hover {
   color: #eeeeee;
   background-color: #f2a012;
   transition: color 0.1s linear, background-color 0.1s linear;

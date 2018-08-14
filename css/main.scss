@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+
+
+$icon-size: 6.5vmin;
+
+
+
 HTML,
 Body {
 	width: 100%;
@@ -9,6 +15,12 @@ Body {
 }
 
 
+
+#title.voez-text {
+	position: absolute;
+	left: 25%;
+	top: 40%;
+}
 
 #profile.voez-slot {
 	--degree: 45deg;
@@ -37,11 +49,12 @@ Body {
 
 	.voez-tile--item,
 	.voez-tabs--cover {
-		font-size: 7.5vmin;
+		font-size: $icon-size;
 	}
 
+	.voez-tile--item Img,
 	.voez-tile--item Svg {
-		width: 7.5vmin;
+		width: $icon-size;
 	}
 
 	> #landing-link {
@@ -54,6 +67,8 @@ Body {
 	> #landing-menu {
 		grid-column: 2 / 3;
 		grid-row: 1 / 2;
+
+		.voez-tab { --degree: 45deg }
 	}
 
 	> #landing-sharing {
