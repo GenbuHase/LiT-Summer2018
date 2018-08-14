@@ -11,13 +11,13 @@ Body {
   top: 40%;
 }
 
-#profile.voez-slot {
+#header.voez-slot {
   --degree: 45deg;
   position: absolute;
   left: -2.5%;
   top: 7.5%;
 }
-#profile.voez-slot > .voez-tile {
+#header.voez-slot > .voez-tile {
   width: 19.5vmin;
 }
 
