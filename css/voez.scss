@@ -11,6 +11,25 @@
 	}
 }
 
+@mixin clickable () {
+	@if & {
+		transition:
+			background-color 0.25s linear,
+			box-shadow 0.1s linear;
+
+
+
+		&:hover {
+			background-color: $selected-background-color;
+			box-shadow: 0px 0px 10px 2.5px $selected-shadow-color;
+
+			transition:
+				background-color 0.25s linear,
+				box-shadow 0.1s linear;
+		}
+	}
+}
+
 
 
 $text-color: #6c6e8d;
@@ -73,20 +92,7 @@ $selected-tab-background-color: #f2a012;
 		outline: 0.5vmin solid $outline-color;
 		// box-shadow: 2px -2px 10px 0px black;
 		
-		transition:
-			background-color 0.25s linear,
-			box-shadow 0.1s linear;
-
-
-
-		&:hover {
-			background-color: $selected-background-color;
-			box-shadow: 0px 0px 10px 2.5px $selected-shadow-color;
-
-			transition:
-				background-color 0.25s linear,
-				box-shadow 0.1s linear;
-		}
+		
 
 		A {
 			text-decoration: none;
@@ -124,6 +130,7 @@ $selected-tab-background-color: #f2a012;
 
 	.voez-tabs {
 		@extend .voez-tile;
+		@include clickable();
 
 		cursor: pointer;
 
