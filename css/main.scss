@@ -1,18 +1,61 @@
 @charset "UTF-8";
 
-HTML {
-	Width: 100%;
-	Height: 100%;
-
-	Overflow: Hidden;
-
-	Font-Family: "メイリオ", "Meiryo";
-}
-
+HTML,
 Body {
-	@extend HTML;
+	width: 100%;
+	height: 100%;
+
+	margin: 0;
 }
 
-.voez-slot > * {
-	Width: 5vw;
+
+
+#profile.voez-slot {
+	--degree: 45deg;
+
+	position: absolute;
+	left: -2.5%;
+	top: 7.5%;
+
+
+
+	> .voez-tile {
+		width: 19.5vmin;
+	}
+}
+
+#landing.voez-grid {
+	--degree: 45deg;
+	--columns: 20vmin 20vmin;
+	--rows: 20vmin 20vmin;
+
+	position: absolute;
+	right: 7.5%;
+	top: 40%;
+
+
+
+	.voez-tile--item,
+	.voez-tabs--cover {
+		font-size: 7.5vmin;
+	}
+
+	> #landing-blank {
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+
+	> #landing-menu {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+	}
+
+	> #landing-sharing {
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+	}
+
+	> #landing-sharing .voez-tab {
+		--degree: 45deg;
+	}
 }

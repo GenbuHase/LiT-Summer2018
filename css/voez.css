@@ -1,30 +1,80 @@
+@charset "UTF-8";
 .voez {
-  Margin: 0;
+  margin: 0;
+  overflow: hidden;
+  color: #6c6e8d;
+  font-size: 2.5vmin;
 }
-.voez .voez-slot {
-  Display: Inline-Flex;
-  Flex-Direction: Row;
-  Margin: 0;
-  Padding: 0;
-  Transform: Rotate(var(--degree, 0));
-  Transform-Origin: Left Center;
+.voez .voez-slot, .voez .voez-grid, .voez .voez-tabs > .voez-tabs--holder {
+  --degree: initial;
+  display: inline-flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  transform: rotate(var(--degree, 0));
+  transform-origin: center;
 }
-.voez .voez-tile {
-  Display: Inline-Flex;
-  Flex-Direction: Row;
-  Justify-Content: Center;
-  Align-Items: Center;
-  Outline: 0.005vh Solid #717391;
+.voez .voez-grid {
+  display: grid;
+  grid-template-columns: var(--columns, none);
+  grid-template-rows: var(--rows, none);
+  grid-template-areas: var(--tiles, none);
 }
-.voez .voez-tile::Before {
-  Content: "";
-  Display: Block;
-  Padding-Top: 100%;
+.voez .voez-grid .voez-slot, .voez .voez-grid .voez-grid, .voez .voez-grid .voez-tabs > .voez-tabs--holder,
+.voez .voez-grid .voez-tile,
+.voez .voez-grid .voez-tabs {
+  grid-area: var(--tile, "");
 }
-.voez .voez-tile * {
-  Width: 100%;
-  Text-Align: Center;
-  Transform: Rotate(calc(var(--degree, 0) * -1));
+.voez .voez-tile, .voez .voez-tabs {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5vmin 0.5vmin 0;
+  outline: 0.5vmin solid #717391;
+  transition: box-shadow 0.1s linear;
+}
+.voez .voez-tile::Before, .voez .voez-tabs::Before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.voez .voez-tile:hover, .voez .voez-tabs:hover {
+  box-shadow: 0px 0px 10px 2.5px #327cf5;
+  transition: box-shadow 0.1s linear;
+}
+.voez .voez-tile .voez-tile--item, .voez .voez-tabs .voez-tile--item, .voez .voez-tile .voez-tabs > .voez-tabs--cover, .voez .voez-tabs > .voez-tabs--cover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: rotate(calc(var(--degree, 0) * -1));
+}
+.voez .voez-tile .voez-tile--item-picture, .voez .voez-tabs .voez-tile--item-picture {
+  transform: none;
+}
+.voez .voez-tabs {
+  transition: background-color 0.25s linear;
+}
+.voez .voez-tabs:hover {
+  background: #e2e2e8;
+  transition: background-color 0.25s linear;
+}
+.voez .voez-tabs > .voez-tabs--holder {
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+}
+.voez .voez-tabs > .voez-tabs--holder > .voez-tab {
+  width: 50%;
+  height: 50%;
+}
+.voez .voez-text {
+  display: inline;
+  font-family: "メイリオ", "Meiryo";
+}
+.voez .hidden {
+  display: none !important;
 }
 
 /*# sourceMappingURL=voez.css.map */
