@@ -11,7 +11,7 @@
 		<Link Rel = "StyleSheet" Href = "./css/main.css" />
 		<Link Rel = "StyleSheet" Href = "./css/voez.css" />
 		<Script Src = "./js/voez.js" Defer></Script>
-		
+
 		<Script Src = "./js/main.js" Defer></Script>
 	</Head>
 
@@ -23,9 +23,9 @@
 				<Span Class = "voez-tile--item">Top</Span>
 			</Div>
 
-			<A Class = "voez-tile" Href = "#profile">
+			<Div Class = "voez-tile">
 				<Img Class = "voez-tile--item voez-tile--item-picture" Src = "./assets/profile.png" />
-			</A>
+			</Div>
 		</UL>
 
 		<Article ID = "profile" Class = "voez--hidden">
@@ -64,21 +64,19 @@
 			</Div>
 
 			<Div ID = "landing-menu" Class = "voez-tabs">
-				<Span Class = "voez-tabs--cover material-icons">menu</Span>
+				<Span Class = "voez-tabs--cover material-icons">mail</Span>
 
 				<Nav Class = "voez-tabs--holder">
-					<Div Class = "voez-tab">
-						<A Class = "voez-tile--item material-icons" Href = "https://genbuhase.github.io/Product" Target = "_blank">extension</A>
-					</Div>
-					
-					<Div Class = "voez-tab">
-						<A Class = "voez-tile--item material-icons" Href = "https://genbuhase.github.io/Mod" Target = "_blank">code</A>
+					<Div Class = "voez-tab voez-tab--empty">
+						<Span Class = "voez-tile--item"></Span>
 					</Div>
 
 					<Div Class = "voez-tab">
-						<A Class = "voez-tile--item material-icons" Href = "https://genbuhase.github.io/Drawing" Target = "_blank">
-							<Img Src = "./assets/drawing.ico" />
-						</A>
+						<A Class = "voez-tile--item material-icons" Href = "#review">comment</A>
+					</Div>
+
+					<Div Class = "voez-tab">
+						<A Class = "voez-tile--item material-icons" Href = "#profile">person</A>
 					</Div>
 
 					<Div Class = "voez-tab voez-tab--back">
