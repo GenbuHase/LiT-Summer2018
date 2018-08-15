@@ -1,0 +1,43 @@
+.note {
+  display: none;
+  padding: 1em;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 2px 2px 5px 0px black;
+  border: 0.5vmin solid #717391;
+}
+.note.note--open {
+  position: fixed;
+  left: 25%;
+  top: 10%;
+  display: block;
+  width: 50%;
+  height: 80%;
+}
+.note > .note-header,
+.note > .note-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 10%;
+}
+.note > .note-header .note-title,
+.note > .note-footer .note-title {
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+}
+.note > .note-content {
+  height: 80%;
+  overflow-y: auto;
+  line-height: 1.75;
+}
+.note .note-btn {
+  margin: auto 0;
+}
+.note .note-btn A {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=note.css.map */

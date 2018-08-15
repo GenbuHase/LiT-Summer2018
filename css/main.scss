@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-
-
 $icon-size: 6.5vmin;
 
 
@@ -76,11 +74,5 @@ Body {
 		grid-row: 2 / 3;
 
 		.voez-tab { --degree: 45deg }
-	}
-}
-
-#profile {
-	&.open {
-		
 	}
 }

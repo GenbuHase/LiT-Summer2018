@@ -9,10 +9,12 @@
 		<Link Rel = "StyleSheet" Href = "libs/Material Icons Extended/material-icons-extended.css" />
 
 		<Link Rel = "StyleSheet" Href = "./css/main.css" />
+		<Link Rel = "StyleSheet" Href = "./css/note.css" />
 		<Link Rel = "StyleSheet" Href = "./css/voez.css" />
-		<Script Src = "./js/voez.js" Defer></Script>
 
 		<Script Src = "./js/main.js" Defer></Script>
+		<Script Src = "./js/note.js" Defer></Script>
+		<Script Src = "./js/voez.js" Defer></Script>
 	</Head>
 
 	<Body Class = "voez">
@@ -28,12 +30,56 @@
 			</Div>
 		</UL>
 
-		<Article ID = "profile" Class = "voez--hidden">
+		<Article ID = "note--profile" Class = "note">
+			<Section Class = "note-header">
+				<Span Class = "note-title">✨自己紹介✨</Span>
+			</Section>
 
+			<Section Class = "note-content">
+				お初にお目に掛かります。どっかの玄ちゃんです。<Br />
+				製作当時は高2の高校生やってます！！✌︎('ω'✌︎ )
+			</Section>
+
+			<Section Class = "note-footer">
+				<Div Class = "note-btn note-btn--close">
+					<A Href = "#back">閉じる</A>
+				</Div>
+			</Section>
 		</Article>
 
-		<Article ID = "review" Class = "voez--hidden">
+		<Article ID = "note--review" Class = "note">
+			<Section Class = "note-header">
+				<Span Class = "note-title">✨Life is Tech Summer Camp in 2018@立教大学 8/11-8/15を振り返って✨</Span>
+			</Section>
 
+			<Section Class = "note-content">
+				Life is Tech(以下LiT)のキャンプに参加するのは実に3年ぶりでした。<Br />
+				つまり、前回は中2の夏。あれから色々なことが起こり、変わっていました。
+				
+				<Br /><Br />
+
+				立教に来た当初は、正直不安でいっぱいでした。<Br />
+				みんなと仲良く出来るかな、ちゃんと話せるかな、どうしようかな、……などなど。<Br />
+				ホントに色んな感情がうずめいていました。
+
+				<Br /><Br />
+
+				グループで話してみると自分が最年長だったり、みんながとてもグローバルだったり、加えてみんなの進捗が異常に早かったり。w<Br />
+				この5日間を通して、自分の知らない世界を知る事ができました。<Br />
+				このグループで過ごした5日間、本当にあっという間のものでした。
+				
+				<Br /><Br />
+
+				今回このグループで一緒に楽しめて、心の底から本当に嬉しいと思っています。<Br />
+				最後で、最高のLiTキャンプに参加出来てよかったです。<Br />
+				本当にありがとうございました。
+			</Section>
+
+			<Section Class = "note-footer">
+				<Div Class = "note-btn note-btn--close">
+					<A Href = "#back">閉じる</A>
+				</Div>
+			</Section>
 		</Article>
 
 		<UL ID = "landing" Class = "voez-grid">
@@ -71,11 +117,11 @@
 						<Span Class = "voez-tile--item"></Span>
 					</Div>
 
-					<Div Class = "voez-tab">
+					<Div ID = "landing-menu--review" Class = "voez-tab">
 						<A Class = "voez-tile--item material-icons" Href = "#review">comment</A>
 					</Div>
 
-					<Div Class = "voez-tab">
+					<Div ID = "landing-menu--profile" Class = "voez-tab">
 						<A Class = "voez-tile--item material-icons" Href = "#profile">person</A>
 					</Div>
 

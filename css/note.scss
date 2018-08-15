@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+$note-width: 50%;
+$note-height: 80%;
+$note-background-color: #ffffff;
+$note-outline-color: #717391;
+
+
+
+.note {
+	display: none;
+	padding: 1em;
+
+	z-index: 100;
+
+	background: $note-background-color;
+	box-shadow: 2px 2px 5px 0px black;
+	border: 0.5vmin solid $note-outline-color;
+
+
+
+	&.note--open {
+		position: fixed;
+		left: (100% - $note-width) / 2;
+		top: (100% - $note-height) / 2;
+
+		display: block;
+		width: $note-width;
+		height: $note-height;
+	}
+
+	> .note-header,
+	> .note-footer {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+
+		height: 10%;
+
+
+
+		.note-title {
+			margin: auto;
+
+			text-align: center;
+			font-weight: bold;
+		}
+	}
+
+	> .note-content {
+		height: 80%;
+		overflow-y: auto;
+
+		line-height: 1.75;
+	}
+
+	.note-btn {
+		margin: auto 0;
+
+
+
+		A {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+}

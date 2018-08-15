@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+$text-color: #6c6e8d;
+$outline-color: #717391;
+$selected-background-color: #e2e2e8;
+$selected-shadow-color: #327cf5;
+$selected-tab-text-color: #eeeeee;
+$selected-tab-background-color: #f2a012;
+
 @mixin flexible-box ($aspect: 100%) {
 	@if & {
 		&::Before {
@@ -31,15 +38,6 @@
 		}
 	}
 }
-
-
-
-$text-color: #6c6e8d;
-$outline-color: #717391;
-$selected-background-color: #e2e2e8;
-$selected-shadow-color: #327cf5;
-$selected-tab-text-color: #eeeeee;
-$selected-tab-background-color: #f2a012;
 
 
 
@@ -92,7 +90,7 @@ $selected-tab-background-color: #f2a012;
 		
 		margin: 0 0.5vmin 0.5vmin 0;
 		outline: 0.5vmin solid $outline-color;
-		// box-shadow: 2px -2px 10px 0px black;
+		box-shadow: 2px -2px 10px 0px black;
 		
 		
 
