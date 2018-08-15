@@ -59,8 +59,8 @@
   transform: none;
 }
 .voez .voez-tabs {
-  transition: background-color 0.25s linear, box-shadow 0.1s linear;
   cursor: pointer;
+  transition: background-color 0.25s linear, box-shadow 0.1s linear;
 }
 .voez .voez-tabs:hover {
   background-color: #e2e2e8;
@@ -78,6 +78,9 @@
   height: 50%;
   transition: color 0.1s linear, background-color 0.1s linear;
 }
+.voez .voez-tabs > .voez-tabs--holder > .voez-tab:not(.voez-tab--empty) {
+  cursor: pointer;
+}
 .voez .voez-tabs > .voez-tabs--holder > .voez-tab:not(.voez-tab--empty):hover {
   color: #eeeeee;
   background-color: #f2a012;
@@ -90,7 +93,7 @@
   display: inline;
   font-family: "メイリオ", "Meiryo";
 }
-.voez .hidden {
+.voez .voez--hidden {
   display: none !important;
 }
 

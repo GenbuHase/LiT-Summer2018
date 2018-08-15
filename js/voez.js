@@ -7,7 +7,7 @@ for (const voezTabs of voezTabsCollection) {
 	const holder = voezTabs.querySelector(".voez-tabs--holder");
 	const backTile = voezTabs.querySelector(".voez-tabs--holder > .voez-tab.voez-tab--back");
 
-	holder.classList.add("hidden");
+	holder.classList.add("voez--hidden");
 
 	while (holder.children.length < 4) {
 		const tab = document.createElement("div");
@@ -21,12 +21,14 @@ for (const voezTabs of voezTabsCollection) {
 	}
 
 	cover.addEventListener("click", () => {
-		cover.classList.toggle("hidden");
-		holder.classList.toggle("hidden");
+		voezTabs.classList.toggle("voez-tabs--open");
+		cover.classList.toggle("voez--hidden");
+		holder.classList.toggle("voez--hidden");
 	});
 
 	backTile.addEventListener("click", () => {
-		holder.classList.toggle("hidden");
-		cover.classList.toggle("hidden");
+		voezTabs.classList.toggle("voez-tabs--open");
+		cover.classList.toggle("voez--hidden");
+		holder.classList.toggle("voez--hidden");
 	});
 }

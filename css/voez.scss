@@ -13,6 +13,8 @@
 
 @mixin clickable () {
 	@if & {
+		cursor: pointer;
+
 		transition:
 			background-color 0.25s linear,
 			box-shadow 0.1s linear;
@@ -132,8 +134,6 @@ $selected-tab-background-color: #f2a012;
 		@extend .voez-tile;
 		@include clickable();
 
-		cursor: pointer;
-
 
 
 		> .voez-tabs--cover {
@@ -159,6 +159,12 @@ $selected-tab-background-color: #f2a012;
 				transition:
 					color 0.1s linear,
 					background-color 0.1s linear;
+				
+
+
+				&:not(.voez-tab--empty) {
+					cursor: pointer;
+				}
 
 				&:not(.voez-tab--empty):hover {
 					color: $selected-tab-text-color;
@@ -168,10 +174,10 @@ $selected-tab-background-color: #f2a012;
 						color 0.1s linear,
 						background-color 0.1s linear;
 				}
-			}
 
-			> .voez-tab.voez-tab--back {
-				cursor: pointer;
+				&.voez-tab--back {
+					cursor: pointer;
+				}
 			}
 		}
 	}
@@ -183,7 +189,7 @@ $selected-tab-background-color: #f2a012;
 
 	
 
-	.hidden {
+	.voez--hidden {
 		display: none !important;
 	}
 }
